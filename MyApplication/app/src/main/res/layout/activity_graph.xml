@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gyjmoble="http://schemas.android.com/apk/res/com.example.administrator.myapplication"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".GraphActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.administrator.myapplication.AxisYView
+            android:id="@+id/GraphAxisY"
+            android:layout_width="20px"
+            android:layout_height="match_parent"
+            gyjmoble:AxisYLineColor="#0AFAF6"
+            gyjmoble:AxisYLineThickness="2dp" />
+
+        <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/GraphAxisY"
+                android:layout_toRightOf="@+id/GraphAxisY">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.administrator.myapplication.GraphView
+                        android:id="@+id/GraphView"
+                        android:layout_width="600px"
+                        android:layout_height="match_parent"
+                        gyjmoble:axisXColor="#00FF00"
+                        gyjmoble:axisXThickness="2dp"
+                        gyjmoble:lineColor="#0073cc"
+                        gyjmoble:lineThickness="2dp"
+                        gyjmoble:pointColor="#ec4800"
+                        gyjmoble:pointSize="4dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+    </RelativeLayout>
+</LinearLayout>
