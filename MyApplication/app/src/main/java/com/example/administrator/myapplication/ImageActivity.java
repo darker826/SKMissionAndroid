@@ -21,41 +21,56 @@ public class ImageActivity extends AppCompatActivity {
     private BluetoothDevice mDevice;
     private byte mDataBuffer[] = new byte[24];
     private int mCount = 0;
-    long nstartA = 0;
-    long nendA = 0;
 
-    long nstartB = 0;
-    long nendB = 0;
+    private long nstartA = 0;
+    private long nendA = 0;
 
-    long nstartC = 0;
-    long nendC = 0;
+    private long nstartB = 0;
+    private long nendB = 0;
+
+    private long nstartC = 0;
+    private long nendC = 0;
 
     int streamID;
 
     //vibrate
-    final Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    private Vibrator vibe;
 
     //sound
     final SoundPool soundPool = new SoundPool(1, AudioManager.STREAM_ALARM, 0);
-    final int soundID = soundPool.load(this, R.raw.realsound, 1);
+    private int soundID;
 
     //image
-    final Drawable red = getResources().getDrawable(R.drawable.red);
-    final Drawable green = getResources().getDrawable(R.drawable.green);
+    private Drawable red;
+    private Drawable green;
 
     //imageView 정의부분
 
-    final ImageView imageViewR1 = (ImageView) findViewById(R.id.imageViewR1);
-    final ImageView imageViewL1 = (ImageView) findViewById(R.id.imageViewL1);
-    final ImageView imageViewR2 = (ImageView) findViewById(R.id.imageViewR2);
-    final ImageView imageViewL2 = (ImageView) findViewById(R.id.imageViewL2);
-    final ImageView imageViewR3 = (ImageView) findViewById(R.id.imageViewR3);
-    final ImageView imageViewL3 = (ImageView) findViewById(R.id.imageViewL3);
+    private ImageView imageViewR1;
+    private ImageView imageViewL1;
+    private ImageView imageViewR2;
+    private ImageView imageViewL2;
+    private ImageView imageViewR3;
+    private ImageView imageViewL3;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
+
+        vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        soundID = soundPool.load(this, R.raw.realsound, 1);
+
+        red = getResources().getDrawable(R.drawable.red);
+        green = getResources().getDrawable(R.drawable.green);
+
+        imageViewR1 = (ImageView) findViewById(R.id.imageViewR1);
+        imageViewL1 = (ImageView) findViewById(R.id.imageViewL1);
+        imageViewR2 = (ImageView) findViewById(R.id.imageViewR2);
+        imageViewL2 = (ImageView) findViewById(R.id.imageViewL2);
+        imageViewR3 = (ImageView) findViewById(R.id.imageViewR3);
+        imageViewL3 = (ImageView) findViewById(R.id.imageViewL3);
+
 /*
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setElevation(0);
