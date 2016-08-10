@@ -45,6 +45,7 @@ public class GraphView extends View {
         setTypes(context, attrs);
 
         mPoints = new ArrayList<Integer>();
+
     }
 
     //간격 설정

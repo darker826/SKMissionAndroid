@@ -49,6 +49,7 @@ public class AxisYView extends View {
     private void drawAxisY(Canvas canvas) {
         mPointPaint.setStrokeWidth(mThickness);
         mPointPaint.setColor(mLineColor);
+        mSpace = (getHeight()/2)/38;
         //숫자
         for(int i = 0; i < getHeight() / 2; i += mSpace){
             if(i == 0) {

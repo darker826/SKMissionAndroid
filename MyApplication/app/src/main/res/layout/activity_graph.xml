@@ -18,7 +18,7 @@
             android:id="@+id/GraphAxisY"
             android:layout_width="20px"
             android:layout_height="match_parent"
-            gyjmoble:AxisYLineColor="#0AFAF6"
+            gyjmoble:AxisYLineColor="#000"
             gyjmoble:AxisYLineThickness="2dp" />
 
         <HorizontalScrollView
@@ -35,13 +35,13 @@
 
                     <com.example.administrator.myapplication.GraphView
                         android:id="@+id/GraphView"
-                        android:layout_width="600px"
+                        android:layout_width="1500px"
                         android:layout_height="match_parent"
-                        gyjmoble:axisXColor="#00FF00"
+                        gyjmoble:axisXColor="#000"
                         gyjmoble:axisXThickness="2dp"
-                        gyjmoble:lineColor="#0073cc"
+                        gyjmoble:lineColor="#FCCC66"
                         gyjmoble:lineThickness="2dp"
-                        gyjmoble:pointColor="#ec4800"
+                        gyjmoble:pointColor="#FF4081"
                         gyjmoble:pointSize="4dp" />
                 </LinearLayout>
             </HorizontalScrollView>

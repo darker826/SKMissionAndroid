@@ -54,6 +54,12 @@ public class ImageActivity extends AppCompatActivity {
     private ImageView imageViewL3;
 
     @Override
+    protected void onDestroy() {
+//        mClient.clear();
+        super.onDestroy();
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
@@ -66,8 +72,10 @@ public class ImageActivity extends AppCompatActivity {
 
         imageViewR1 = (ImageView) findViewById(R.id.imageViewR1);
         imageViewL1 = (ImageView) findViewById(R.id.imageViewL1);
+
         imageViewR2 = (ImageView) findViewById(R.id.imageViewR2);
         imageViewL2 = (ImageView) findViewById(R.id.imageViewL2);
+
         imageViewR3 = (ImageView) findViewById(R.id.imageViewR3);
         imageViewL3 = (ImageView) findViewById(R.id.imageViewL3);
 

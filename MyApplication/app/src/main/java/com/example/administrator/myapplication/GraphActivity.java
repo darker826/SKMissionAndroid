@@ -25,11 +25,11 @@ public class GraphActivity extends AppCompatActivity {
     private byte mDataBuffer[] = new byte[24];
     private byte mCount = 0;
 
-    final Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    private Vibrator vibe;
 
     @Override
     protected void onDestroy() {
-        mClient.clear();
+//        mClient.clear();
         super.onDestroy();
     }
 
@@ -37,6 +37,8 @@ public class GraphActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
+
+        vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         //Y축 View 생성
         mAxisYView = (AxisYView) findViewById(R.id.GraphAxisY);
@@ -46,15 +48,16 @@ public class GraphActivity extends AppCompatActivity {
 
         //간격설정
         mAxisYView.setSpace(20);
-        mGraphView.setSpace(20);
+        mGraphView.setSpace(50);
 
         //그래프에 점 추가 함수
         mGraphView.setPointY(200);
         mGraphView.setPointY(300);
+        mGraphView.setPointY(380);
         mGraphView.setPointY(-200);
         mGraphView.setPointY(-100);
 
-
+        /*
         //블루투스 생성 및 연결
         mClient = BluetoothSerialClient.getInstance();
         if (mClient == null) {
@@ -66,6 +69,7 @@ public class GraphActivity extends AppCompatActivity {
         if (mDevice != null) {
             connect(mDevice);
         }
+        */
     }
 
     //블루투스가 켜져있지 않으면 블루투스를 켜달라고 함.
