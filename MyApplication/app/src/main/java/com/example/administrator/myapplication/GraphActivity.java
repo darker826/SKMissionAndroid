@@ -51,13 +51,13 @@ public class GraphActivity extends AppCompatActivity {
         mGraphView.setSpace(50);
 
         //그래프에 점 추가 함수
-        mGraphView.setPointY(200);
+       /* mGraphView.setPointY(200);
         mGraphView.setPointY(300);
         mGraphView.setPointY(380);
         mGraphView.setPointY(-200);
         mGraphView.setPointY(-100);
+*/
 
-        /*
         //블루투스 생성 및 연결
         mClient = BluetoothSerialClient.getInstance();
         if (mClient == null) {
@@ -69,7 +69,7 @@ public class GraphActivity extends AppCompatActivity {
         if (mDevice != null) {
             connect(mDevice);
         }
-        */
+
     }
 
     //블루투스가 켜져있지 않으면 블루투스를 켜달라고 함.

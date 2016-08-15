@@ -84,7 +84,7 @@ public class ImageActivity extends AppCompatActivity {
         getSupportActionBar().setElevation(0);
         getSupportActionBar().setTitle("IMAGE");
 */
-        /*
+
         mClient = BluetoothSerialClient.getInstance();
         if (mClient == null) {
             Log.d("블루투스", "블루투스를 지원하지 않습니다.");
@@ -95,9 +95,9 @@ public class ImageActivity extends AppCompatActivity {
         if (mDevice != null) {
             connect(mDevice);
         }
-        */
-        byte[] data = {127, 50, 127, 30, 12, 127};
-        setGraph(data);
+
+     //   byte[] data = {127, 50, 127, 30, 12, 127};
+    //    setGraph(data);
     }
 
 /*
@@ -304,7 +304,6 @@ public class ImageActivity extends AppCompatActivity {
                 }
                 mDataBuffer[mCount] = buffer[i];
                 if (mCount == 5) {
-                    //   dataChange(mDataBuffer);
                     setGraph(mDataBuffer);
                 }
                 mCount++;
